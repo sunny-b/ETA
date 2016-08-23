@@ -1,0 +1,276 @@
+/* Basic Style */
+@font-face {
+	font-family: Tofino light;
+	src:url(../fonts/Tofino_Light.otf);
+}
+
+@font-face {
+	font-family: Tofino Bold;
+	src:url(../fonts/Tofino_Bold.otf);
+}
+
+* {
+	font-family: "Tofino light";
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: Lato, sans-serif;
+  
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  position:absolute;
+}
+.container {
+  display: block;
+  height:100%;
+  width:100%;
+  
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li * {
+  float: left;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+input, button {
+  outline: none;
+}
+button {
+	padding:0;
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 45px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: #333;
+}
+/* Heading */
+h3,
+label[for='new-task'] {
+  color: #333;
+  font-weight: 700;
+  font-size: 13px;
+  border-bottom: 1px solid #2a56f4;
+  
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing:0.8px;
+}
+
+h3 {
+	padding: 32px 0 30px;
+}
+
+label[for='new-task'] {
+	padding: 10px 0 10px;
+}
+
+
+input[type="text"] {
+  
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  
+  background:#f2f2f2;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+  border:none;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new-task {
+  float: left;
+  width: 323px;
+}
+p > button:hover {
+  color: #0FC57C;
+}
+
+/* Task list */
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+}
+li > label {
+  font-size: 18px;
+  line-height: 22px;
+  width: 70%;
+  min-width:155px;
+  padding: 9px 0 0 11px;
+  word-wrap:break-word;
+  
+}
+li >  input[type="text"] {
+  width: 226px;
+}
+li > .delete:hover {
+  color: #CF2323;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit Task */
+ul li input[type=text] {
+  display:none;
+}
+
+ul li.editMode input[type=text] {
+  display:block;
+}
+
+ul li.editMode label {
+  display:none;
+}
+
+
+
+/*********************
+OVERRIDE CSS
+*********************/
+
+div.taskBar {
+	position:absolute;
+	left:0;
+	width:100px;
+	height:100%;
+	background:#2a56f4;
+}
+
+div.group {
+	margin:0 auto;
+	width:450px;
+}
+
+button.add {
+	margin-left:10px;
+	margin: 20px 0 0 10px;
+}
+
+div.block {
+	display:block;
+	width:50%;
+	float:left;
+}
+
+p {
+	margin:0;
+	padding:0;
+	
+}
+
+#addTask {
+	width:100%;
+	clear:both;
+	margin-bottom:20px;
+	opacity:1;
+	transition: all 0.2s ease;
+}
+
+#addTask p {
+	text-align:center;
+	
+}
+
+h3 {
+	text-align:center;
+	
+}
+
+h1 {
+	text-align:center;
+	font-size:1.7rem;
+	margin:25px 0 0 0;
+	color:white;
+	font-family: "Tofino Bold";
+	letter-spacing:1.5px;
+}
+
+div#completed {
+	background: #f7f7f7;
+	height:100%;
+}
+
+input#new-task {
+	
+	margin: 10px 0 0 30px;
+}
+
+div#addTask.hide {
+		
+		opacity:0;
+	}
+	
+	button.plus {
+		position:absolute;
+		font-size: 3em;
+		color: #2A56F4;
+		transition: transform 0.2s ease;
+		z-index: 10;
+		top:7px;
+		margin-left:90px;
+	}
+	
+	button.plus.rotate {
+		-webkit-transform: rotate(45deg);
+		font-size:3.4em;
+		top:3px;
+		margin-left:92px;
+	}
+	
+	ul#incomplete-tasks li {
+		background:#fff;
+	}
+	
+	ul#incomplete-tasks.shift {
+		position: relative;
+		top:-68px;
+		
+	}
+
+	div#incomplete {
+		position:relative;
+	}
+	
+	fieldset {
+		background:#fff;
+		margin-top:50px;
+	}
+
+	#name, #word {
+		display:block;
+	}
+
